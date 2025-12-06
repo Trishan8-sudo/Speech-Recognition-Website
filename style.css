@@ -32,6 +32,21 @@ header{
     display: flex;
     justify-content: center;
 }
+.add-btn{
+    margin-left: 10px;
+    background: #e52d27;
+    background: -webkit-linear-gradient(to right, #b31217, #e52d27);
+    background: linear-gradient(to right, #b31217, #e52d27);
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.add-btn:hover{
+    opacity: 0.85;
+}
 .inactive{
     background: #e52d27;
     background: -webkit-linear-gradient(to right, #b31217, #e52d27);
@@ -59,4 +74,35 @@ header{
 }
 .active:hover{
     opacity: 0.85;
+}
+.history {
+    width: 100%;
+    background: #ffe0c7;
+    border-top: 3px solid #b31217;
+    padding: 15px;
+    margin-top: 15px;
+}
+
+.history h3 {
+    margin: 0;
+    font-size: 22px;
+    color: #b31217;
+    font-weight: bold;
+}
+
+.history-list {
+    list-style: none;
+    margin: 10px 0 0 0;
+    padding: 0;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.history-list li {
+    background: #fff6ec;
+    border: 1px solid #e5c3a1;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    font-size: 17px;
 }
