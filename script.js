@@ -65,5 +65,5 @@ addBtn.addEventListener('click', function () {
     historyArr.push(text)
     localStorage.setItem('History',JSON.stringify(historyArr))
     historyList.appendChild(li)
-
+    inputArea.innerText=""
 })
