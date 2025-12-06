@@ -1,6 +1,23 @@
+if(localStorage.getItem('History')==null){
+    localStorage.setItem('History',JSON.stringify([]))
+}
 let inputArea=document.querySelector('.input-area')
 let actionBtn=document.querySelector('.action-btn')
 let btn=actionBtn.children[0]
+let addBtn=document.querySelector('.add-btn')
+let historyList = document.querySelector('.history-list')
+let arrFromLS=JSON.parse(localStorage.getItem('History'))
+let historyArr=arrFromLS
+
+function init(){
+    for(let i=0;i<arrFromLS.length;i++){
+        let text=arrFromLS[i]
+        let li = document.createElement("li")
+        li.textContent = text
+        historyList.appendChild(li)
+    }
+}
+init()
 
 const inactive='inactive'
 const active='active'
@@ -32,4 +49,21 @@ btn.addEventListener('click',function(){
         btn.innerText="Speech to Text is Inactive"
         alert("Speech to Text is Inactive")
     }
+})
+
+//managing history section
+addBtn.addEventListener('click', function () {
+    let text=inputArea.innerText
+
+    if (text==="") {
+        alert("No text available to add to history!")
+        return
+    }
+
+    let li = document.createElement("li")
+    li.textContent = text
+    historyArr.push(text)
+    localStorage.setItem('History',JSON.stringify(historyArr))
+    historyList.appendChild(li)
+
 })
