@@ -1,0 +1,62 @@
+*{
+    font-family: Montserrat;
+}
+body{
+    background: #FFAFBD;
+    background: -webkit-linear-gradient(to right, #ffc3a0, #FFAFBD);
+    background: linear-gradient(to right, #ffc3a0, #FFAFBD);
+    margin: 0;
+}
+
+header{
+    text-align: center;
+    background: #FA8072;
+    color: white;
+    padding: 20px;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+}
+
+.input-area{
+    border: solid 2px black;
+    height: 70vh;
+    margin-bottom: 30px;
+    background: #FFE4C4;
+    border-radius: 6px;
+    width: 100%;
+    font-size: 20px;
+}
+
+.action-btn{
+    display: flex;
+    justify-content: center;
+}
+.inactive{
+    background: #e52d27;
+    background: -webkit-linear-gradient(to right, #b31217, #e52d27);
+    background: linear-gradient(to right, #b31217, #e52d27);
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.inactive:hover{
+    opacity: 0.85;
+}
+.active{
+    background: #799F0C;
+    background: -webkit-linear-gradient(to right, #ACBB78, #799F0C);
+    background: linear-gradient(to right, #ACBB78, #799F0C);
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.active:hover{
+    opacity: 0.85;
+}
